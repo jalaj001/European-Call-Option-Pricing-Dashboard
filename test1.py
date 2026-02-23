@@ -78,9 +78,9 @@ c5, c6, c7 = st.columns(3)
 with c5:
     T = st.number_input("Time to Maturity (T)", value=1.0)
 with c6:
-    N_tree = st.slider("Binomial Steps", 10, 2000, 200)
+    N_tree = st.slider("Binomial Steps", 10, 500, 200)
 with c7:
-    M = st.slider("Monte Carlo Simulations", 1000, 200000, 50000)
+    M = st.slider("Monte Carlo Simulations", 1000, 1000000, 50000)
 
 st.divider()
 
@@ -135,7 +135,7 @@ ax.set_title("European Call Option Pricing")
 ax.grid(axis="y", alpha=0.3)
 
 plt.tight_layout()   # 🔑 prevents clipping
-st.pyplot(fig, use_container_width=True)
+st.pyplot(fig, width='stretch')
 
 # -------------------------
 # Footer
